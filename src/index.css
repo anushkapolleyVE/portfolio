@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --surface: #171717;
+    --surface-raised: #262626;
+    --text-primary: #fafafa;
+    --text-secondary: #a3a3a3;
+    --text-muted: #737373;
+    --accent: #8b5cf6;
+    --accent-soft: rgba(139, 92, 246, 0.1);
+    --border: #333333;
+  }
+
+  body {
+    @apply bg-bg text-text-primary antialiased min-h-screen selection:bg-accent selection:text-white;
+  }
+}
+
+@layer utilities {
+  .spring-lift {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  }
+  
+  .spring-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px 0 var(--accent-soft);
+  }
+}
