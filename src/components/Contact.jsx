@@ -22,18 +22,18 @@ export const Contact = () => {
         </FadeInUp>
 
         <FadeInUp delay={0.2} className="flex flex-col sm:flex-row justify-center gap-6 mb-24">
-          <a href="mailto:hello@example.com" className="inline-block">
+          <a href="mailto:anushkapolley@virtualemployee.com" className="inline-block">
              <LiftCard className="px-8 py-6 flex items-center justify-center gap-3 bg-surface-raised border-accent/20 group">
                 <Mail className="w-6 h-6 text-accent group-hover:scale-110 transition-transform" />
-                <span className="font-medium text-lg">hello@example.com</span>
+                <span className="font-medium text-lg">anushkapolley@virtualemployee.com</span>
              </LiftCard>
           </a>
         </FadeInUp>
 
         <FadeInUp delay={0.3} className="flex justify-center gap-6 mb-12">
           {[
-            { icon: <Github />, label: 'GitHub', href: '#' },
-            { icon: <Linkedin />, label: 'LinkedIn', href: '#' }
+            { icon: <Github />, label: 'GitHub', href: 'https://github.com/anushkapolleyVE' },
+            { icon: <Linkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/anushka-polley-40b2b324b?utm_source=share_via&utm_content=profile&utm_medium=member_android' }
           ].map((social) => (
             <a 
               key={social.label} 

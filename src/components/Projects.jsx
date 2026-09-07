@@ -8,8 +8,8 @@ const items = [
   {
     id: 1,
     title: 'Rag Medical Chatbot',
-    description: 'An AI-powered medical encyclopedia chatbot. It answers general medical queries based on its knowledgebase, while strictly advising users to see a doctor instead of prescribing medicine.',
-    tech: ['HTML/CSS', 'LangChain', 'OpenAI LLM', 'FastAPI', 'Pinecone', 'PostgreSQL', 'Render', 'Vercel'],
+    description: 'A Retrieval-Augmented Generation (RAG) powered conversational assistant built with Flask that answers medical questions accurately by grounding its responses in verified medical literature.',
+    tech: ['Python', 'Flask', 'LangChain', 'OpenAI GPT-4o-mini', 'Pinecone', 'PyPDF', 'Sentence-Transformers', 'HTML/CSS'],
     links: {
       website: 'https://medical-chatbot-zhk6.onrender.com',
       github: 'https://github.com/anushkapolley/Medical-chatbot',
@@ -19,8 +19,8 @@ const items = [
   {
     id: 2,
     title: 'Proposal Generator',
-    description: 'Generates detailed project proposals with workflow diagrams based on user-provided project name, description, budget, timeline, and resources. Proposals can be downloaded and edited as DOCX.',
-    tech: ['React', 'OpenAI', 'FastAPI', 'PostgreSQL', 'Vercel', 'Render'],
+    description: 'Generates structured project proposals via a sequential-context LLM pipeline to minimize hallucination. Features client-side document parsing, Mermaid.js diagram generation, and fully in-browser PDF rendering without backend dependencies.',
+    tech: ['React', 'Vite', 'FastAPI', 'Pydantic', 'OpenAI API', 'jsPDF', 'Mermaid.js'],
     links: {
       website: 'https://proposal-generator-six-virid.vercel.app/',
       github: 'https://github.com/MonojitVE/Proposal_generator-.git',
@@ -41,8 +41,8 @@ const items = [
   {
     id: 9,
     title: 'AI Healthcare Platform',
-    description: 'An AI-powered digital healthcare ecosystem integrating symptom checking, medical report summarization, and a RAG-based medical chatbot with doctor appointment booking.',
-    tech: ['React', 'FastAPI', 'Llama-3.3', 'Pinecone', 'SQLAlchemy'],
+    description: 'A FastAPI-based healthcare backend featuring secure user management and three AI capabilities via Groq API: a RAG medical chatbot (Pinecone & Sentence-Transformers), a symptom checker, and a PDF report summarizer. Includes offline medical knowledge base ingestion.',
+    tech: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Groq API', 'Pinecone', 'Sentence-Transformers', 'PyPDF', 'BeautifulSoup'],
     links: {
       website: 'https://ai-healthcare-portal-odyb.vercel.app/',
       github: null,
@@ -52,8 +52,8 @@ const items = [
   {
     id: 3,
     title: 'Intelligent Invoice Approval Automation',
-    description: 'An end-to-end invoice automation system with an 8-state lifecycle, duplicate detection, and a 9-stage AI pipeline. Features role-based dashboards (RBAC) and confidence-tier automation to reduce hallucination risk.',
-    tech: ['React', 'Tailwind', 'Python', 'FastAPI', 'PostgreSQL', 'LLM API', 'OAuth2', 'Docker'],
+    description: 'An AI-augmented invoice approval pipeline with an 8-state lifecycle. Features email ingestion, OCR/PDF extraction, Groq API structured extraction, human-in-the-loop validation, deterministic PDF generation, and PKI-based cryptographic digital signatures.',
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Groq API', 'Pydantic', 'pdfplumber/pytesseract', 'pyHanko'],
     links: {
       website: 'https://intelli-invoice-ve.vercel.app/',
       github: null,
@@ -63,8 +63,8 @@ const items = [
   {
     id: 6,
     title: 'Fieldstone Mortgage',
-    description: 'A modern, responsive landing page designed and developed for a mortgage firm website.',
-    tech: ['React', 'Vercel'],
+    description: 'A static, zero-backend single-page marketing site for a mortgage firm built without frameworks. Features a CSS Custom Properties theme layer, fluid typography, an IntersectionObserver-driven scroll reveal, and a fully client-side mortgage calculator.',
+    tech: ['HTML5', 'CSS3', 'Vanilla JS', 'IntersectionObserver', 'Inline SVG'],
     links: {
       website: 'https://fieldstone-mortgage.vercel.app/',
       github: 'https://github.com/anushkapolleyVE/mortgage-firm.git',
@@ -74,8 +74,8 @@ const items = [
   {
     id: 5,
     title: 'AI Ingredient Analyser',
-    description: 'A pantry app capability that captures food photos, runs AI vision recognition (GPT-4o) to detect ingredients, and merges them into a persistent pantry. Can also generate recipes from available ingredients.',
-    tech: ['React', 'Vite', 'FastAPI', 'GPT-4o Vision', 'Python'],
+    description: 'A multimodal pantry management system using GPT-4o Vision for structured JSON extraction. Features raw ingredient detection with human-in-the-loop review, dish reconstruction, intelligent pantry merging, and inventory-constrained recipe generation.',
+    tech: ['React', 'Vite', 'FastAPI', 'GPT-4o Vision', 'Pydantic', 'Python'],
     links: {
       website: 'https://ingrient-analyser1-1.onrender.com',
       github: 'https://github.com/AfzalVE/Ingrient-Analyser1.git',
@@ -85,8 +85,8 @@ const items = [
   {
     id: 7,
     title: 'AI Email Automation Agent',
-    description: 'A specialised AI agent that reads incoming Microsoft 365 emails, classifies them, applies deterministic business policies, and routes or auto-replies. Includes productivity analytics and a natural-language management interface.',
-    tech: ['React', 'FastAPI', 'PostgreSQL', 'OpenAI GPT-4', 'Microsoft Graph', 'APScheduler'],
+    description: 'An AI-driven email triage and routing platform orchestrating raw inbox polling to human tasks. Uses Groq Llama-3.1-8b for structured classification, feeding a deterministic policy engine for routing, SLA calculation, and AI auto-replies.',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'Groq (Llama-3.1)', 'Gmail API', 'APScheduler', 'React Query'],
     links: {
       website: 'https://ai-email-automation-pi.vercel.app/',
       github: 'https://github.com/anushkapolleyVE/AI-email-automation.git',
@@ -96,8 +96,8 @@ const items = [
   {
     id: 11,
     title: 'Amazon Price Tracker Pro',
-    description: 'A personal shopping assistant Chrome extension that monitors Amazon products in the background and sends desktop notifications with one-click buy links when prices drop to a target.',
-    tech: ['Chrome Extension', 'FastAPI', 'PostgreSQL', 'Python'],
+    description: 'A Manifest V3 Chrome extension and FastAPI backend that monitors prices via headless background HTML fetching and regex extraction. Powered by an event-driven MV3 Service Worker and the Chrome Alarms API.',
+    tech: ['Chrome Extension (MV3)', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Alembic', 'JWT'],
     links: {
       website: 'https://ai-email-automation-1-iuyf.onrender.com',
       github: null,
@@ -107,8 +107,8 @@ const items = [
   {
     id: 8,
     title: 'PreSales AI Agent',
-    description: 'An AI-powered platform automating software pre-sales and proposal generation. Analyzes requirements to identify skills, effort, cost, and timelines, automatically generating professional proposals and POC documents.',
-    tech: ['React', 'OpenAI', 'FastAPI', 'PostgreSQL', 'Vercel', 'Render'],
+    description: 'A role-based multi-tenant SaaS platform automating the pre-sales lifecycle. Separates AI-driven requirement extraction and conversational negotiation from deterministic backend bench allocation and timeline estimation.',
+    tech: ['React', 'Vite', 'Zustand', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'OpenAI API', 'Jinja2', 'JWT'],
     links: {
       website: null,
       github: null,
@@ -118,8 +118,8 @@ const items = [
   {
     id: 10,
     title: 'PropoAI - Real Estate Lead Qualification',
-    description: 'An AI conversational agent that automates early real estate lead qualification, scoring, and appointment scheduling, syncing data to CRM and auto-assigning to sales reps.',
-    tech: ['Next.js', 'FastAPI', 'OpenAI', 'PostgreSQL', 'n8n'],
+    description: 'An AI agent acting as a natural-language interface and structured data-extraction engine for real estate leads. Uses GPT-4o for generative intent-detection, feeding into deterministic backend scoring and appointment scheduling systems.',
+    tech: ['Next.js', 'React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Pydantic', 'GPT-4o'],
     links: {
       website: 'https://real-estate-lead-qualification.vercel.app/',
       github: null,
@@ -129,8 +129,8 @@ const items = [
   {
     id: 12,
     title: 'AI gramX',
-    description: 'A real-time messaging and connection platform inspired by Telegram. Built to handle instant communication and active connections.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Socket.IO', 'MongoDB'],
+    description: 'A full-stack, real-time social messaging platform featuring a hybrid REST and WebSocket architecture. Supports 1:1/group chats, media, ephemeral stories, and real-time presence with stateless JWT authentication.',
+    tech: ['React 19', 'TypeScript', 'Node.js', 'Express', 'Socket.IO', 'MongoDB', 'Zustand', 'TailwindCSS'],
     links: {
       website: 'https://texts-frontend-swart.vercel.app/login',
       github: null,
