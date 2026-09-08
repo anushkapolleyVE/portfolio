@@ -35,7 +35,7 @@ const items = [
     links: {
       website: null,
       github: null,
-      poc: '#hyperlocal-directory-poc'
+      poc: '/poc/hyperlocal_poc.pdf'
     }
   },
   {
@@ -46,7 +46,7 @@ const items = [
     links: {
       website: 'https://ai-healthcare-portal-odyb.vercel.app/',
       github: null,
-      poc: '#ai-healthcare-poc'
+      poc: '/poc/healthcare_poc.pdf'
     }
   },
   {
@@ -57,7 +57,7 @@ const items = [
     links: {
       website: 'https://intelli-invoice-ve.vercel.app/',
       github: null,
-      poc: '#intelligent-invoice-poc'
+      poc: '/poc/invoice_poc.pdf'
     }
   },
   {
@@ -79,7 +79,7 @@ const items = [
     links: {
       website: 'https://ingrient-analyser1-1.onrender.com',
       github: 'https://github.com/AfzalVE/Ingrient-Analyser1.git',
-      poc: '#ai-ingredient-poc'
+      poc: '/poc/ingredient_poc.pdf'
     }
   },
   {
@@ -90,7 +90,7 @@ const items = [
     links: {
       website: 'https://ai-email-automation-pi.vercel.app/',
       github: 'https://github.com/anushkapolleyVE/AI-email-automation.git',
-      poc: '#email-automation-poc'
+      poc: '/poc/email_agent_poc.pdf'
     }
   },
   {
@@ -101,7 +101,7 @@ const items = [
     links: {
       website: 'https://ai-email-automation-1-iuyf.onrender.com',
       github: null,
-      poc: '#amazon-tracker-poc'
+      poc: '/poc/amazon_tracker_poc.pdf'
     }
   },
   {
@@ -110,7 +110,7 @@ const items = [
     description: 'A role-based multi-tenant SaaS platform automating the pre-sales lifecycle. Separates AI-driven requirement extraction and conversational negotiation from deterministic backend bench allocation and timeline estimation.',
     tech: ['React', 'Vite', 'Zustand', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'OpenAI API', 'Jinja2', 'JWT'],
     links: {
-      website: null,
+      website: 'https://presalesaiagent.vestaging.in/',
       github: null,
       poc: null
     }
@@ -123,7 +123,7 @@ const items = [
     links: {
       website: 'https://real-estate-lead-qualification.vercel.app/',
       github: null,
-      poc: '#propoai-poc'
+      poc: '/poc/propoai_poc.pdf'
     }
   },
   {
@@ -198,7 +198,7 @@ export const Projects = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
                       >
-                        <FileText className="w-4 h-4" /> View POC (PDF)
+                        <FileText className="w-4 h-4" /> View POC Document
                       </a>
                     )}
 

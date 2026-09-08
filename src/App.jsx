@@ -6,6 +6,7 @@ import { Projects } from './components/Projects';
 import { Process } from './components/Process';
 import { Learning } from './components/Learning';
 import { Contact } from './components/Contact';
+import { InternshipWorkflow } from './components/InternshipWorkflow';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
       <main>
         <Hero />
         <Skills />
+        <InternshipWorkflow />
         <Learning />
-        <Process />
         <Projects />
       </main>
       <Contact />

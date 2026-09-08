@@ -23,7 +23,7 @@ export const Hero = () => {
               Internship Journey (Feb '24 - Aug '24)
             </div>
           </FadeInUp>
-          
+
           <FadeInUp delay={0.2}>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-text-primary leading-tight">
               Hi, I'm <br />
@@ -32,15 +32,15 @@ export const Hero = () => {
               </span>
             </h1>
           </FadeInUp>
-          
+
           <FadeInUp delay={0.3}>
             <p className="text-lg text-text-secondary max-w-xl leading-relaxed">
-              Welcome to my digital portfolio showcasing my internship journey. 
-              Here you'll find the skills I've acquired, projects and POCs I've developed, 
+              Welcome to my digital portfolio showcasing my internship journey.
+              Here you'll find the skills I've acquired, projects and POCs I've developed,
               and my complete workflow over the past several months.
             </p>
           </FadeInUp>
-          
+
           <FadeInUp delay={0.4} className="flex flex-wrap gap-4">
             <Button variant="primary">
               View Work <ArrowRight className="ml-2 w-4 h-4" />
@@ -50,74 +50,74 @@ export const Hero = () => {
             </Button>
           </FadeInUp>
         </div>
-        
+
         <FadeInUp delay={0.5} className="hidden lg:block relative perspective-1000">
-           <FloatingElement delay={1}>
-             <div className="relative w-full aspect-square max-w-md mx-auto cursor-pointer" onClick={() => setIsFlipped(!isFlipped)} style={{ perspective: '1000px' }}>
-               <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-3xl transform rotate-6 border border-border/50"></div>
-               
-               <motion.div 
-                 className="absolute inset-0 w-full h-full"
-                 initial={false}
-                 animate={{ rotateY: isFlipped ? 180 : 0 }}
-                 transition={{ duration: 0.6, type: 'spring', stiffness: 260, damping: 20 }}
-                 style={{ transformStyle: 'preserve-3d' }}
-               >
-                  {/* Front Side: Picture */}
-                  <div 
-                    className="absolute inset-0 w-full h-full bg-surface rounded-3xl border border-border overflow-hidden shadow-2xl flex items-center justify-center"
-                    style={{ backfaceVisibility: 'hidden' }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg/80 to-transparent z-10 flex flex-col justify-end p-8 text-center">
-                       <p className="text-white font-medium mb-1 drop-shadow-md">Click to reveal ID</p>
+          <FloatingElement delay={1}>
+            <div className="relative w-full aspect-square max-w-md mx-auto cursor-pointer" onClick={() => setIsFlipped(!isFlipped)} style={{ perspective: '1000px' }}>
+              <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-3xl transform rotate-6 border border-border/50"></div>
+
+              <motion.div
+                className="absolute inset-0 w-full h-full"
+                initial={false}
+                animate={{ rotateY: isFlipped ? 180 : 0 }}
+                transition={{ duration: 0.6, type: 'spring', stiffness: 260, damping: 20 }}
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                {/* Front Side: Picture */}
+                <div
+                  className="absolute inset-0 w-full h-full bg-surface rounded-3xl border border-border overflow-hidden shadow-2xl flex items-center justify-center"
+                  style={{ backfaceVisibility: 'hidden' }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg/80 to-transparent z-10 flex flex-col justify-end p-8 text-center">
+                    <p className="text-white font-medium mb-1 drop-shadow-md">Click to reveal ID</p>
+                  </div>
+                  {/* Placeholder picture. Replace the src with your actual image path like '/profile.jpg' */}
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=600"
+                    alt="Anushka Polley"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Back Side: ID Details */}
+                <div
+                  className="absolute inset-0 w-full h-full bg-surface-raised rounded-3xl border border-accent/50 shadow-2xl flex flex-col p-8 items-center text-center"
+                  style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                >
+                  <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mb-4 border border-accent/30 text-accent">
+                    <User className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-1">Anushka Polley</h3>
+
+                  <div className="w-full h-px bg-border my-6"></div>
+
+                  <div className="flex flex-col gap-4 w-full text-left">
+                    <div className="flex items-center gap-3 text-text-secondary">
+                      <Briefcase className="w-5 h-5 text-accent" />
+                      <span>Intern</span>
                     </div>
-                    {/* Placeholder picture. Replace the src with your actual image path like '/profile.jpg' */}
-                    <img 
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=600" 
-                      alt="Anushka Polley" 
-                      className="w-full h-full object-cover"
-                    />
+                    <div className="flex items-center gap-3 text-text-secondary">
+                      <Hash className="w-5 h-5 text-accent" />
+                      <span>ID: TK12690</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-text-secondary">
+                      <Mail className="w-5 h-5 text-accent" />
+                      <span>anushkapolley@virtualemployee.com</span>
+                    </div>
                   </div>
 
-                  {/* Back Side: ID Details */}
-                  <div 
-                    className="absolute inset-0 w-full h-full bg-surface-raised rounded-3xl border border-accent/50 shadow-2xl flex flex-col p-8 items-center text-center"
-                    style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
-                  >
-                    <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mb-4 border border-accent/30 text-accent">
-                      <User className="w-10 h-10" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-text-primary mb-1">Anushka Polley</h3>
-                    
-                    <div className="w-full h-px bg-border my-6"></div>
-                    
-                    <div className="flex flex-col gap-4 w-full text-left">
-                      <div className="flex items-center gap-3 text-text-secondary">
-                        <Briefcase className="w-5 h-5 text-accent" />
-                        <span>Intern</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-text-secondary">
-                        <Hash className="w-5 h-5 text-accent" />
-                        <span>ID: EMP-2024-INT</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-text-secondary">
-                        <Mail className="w-5 h-5 text-accent" />
-                        <span>hello@example.com</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-4 mt-auto w-full justify-center pt-4">
-                      <a href="#" className="p-3 bg-bg rounded-xl border border-border hover:border-accent hover:text-accent transition-colors text-text-secondary">
-                        <Github className="w-5 h-5" />
-                      </a>
-                      <a href="#" className="p-3 bg-bg rounded-xl border border-border hover:border-accent hover:text-accent transition-colors text-text-secondary">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                    </div>
+                  <div className="flex gap-4 mt-auto w-full justify-center pt-4">
+                    <a href="https://github.com/anushkapolleyVE" target="_blank" rel="noopener noreferrer" className="p-3 bg-bg rounded-xl border border-border hover:border-accent hover:text-accent transition-colors text-text-secondary">
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/anushka-polley-40b2b324b" target="_blank" rel="noopener noreferrer" className="p-3 bg-bg rounded-xl border border-border hover:border-accent hover:text-accent transition-colors text-text-secondary">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
                   </div>
-               </motion.div>
-             </div>
-           </FloatingElement>
+                </div>
+              </motion.div>
+            </div>
+          </FloatingElement>
         </FadeInUp>
       </div>
     </section>

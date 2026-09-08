@@ -10,7 +10,7 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['Skills', 'Learning', 'Workflow', 'Work', 'Contact'];
+  const links = ['Skills', 'InternshipWorkflow', 'Learning', 'Work', 'Contact'];
 
   return (
     <motion.nav
