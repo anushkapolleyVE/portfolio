@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useMotionValue, useMotionTemplate } from 'framer-motion';
 
 export const FadeInUp = ({ children, delay = 0, className = "" }) => {
   const shouldReduceMotion = useReducedMotion();
@@ -52,6 +52,14 @@ export const FloatingElement = ({ children, delay = 0, className = "" }) => {
 
 export const LiftCard = ({ children, className = "" }) => {
   const shouldReduceMotion = useReducedMotion();
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
   
   if (shouldReduceMotion) {
     return <div className={className}>{children}</div>;
@@ -59,15 +67,30 @@ export const LiftCard = ({ children, className = "" }) => {
 
   return (
     <motion.div
+      onMouseMove={handleMouseMove}
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ 
         type: "spring", 
         stiffness: 300, 
         damping: 20 
       }}
-      className={`bg-surface rounded-2xl border border-border overflow-hidden hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5),0_0_20px_0_var(--accent-soft)] transition-shadow duration-300 ${className}`}
+      className={`group relative bg-surface rounded-2xl border border-border overflow-hidden hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5),0_0_20px_0_var(--accent-soft)] transition-shadow duration-300 ${className}`}
     >
-      {children}
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-500 group-hover:opacity-100 z-50"
+        style={{
+          background: useMotionTemplate`
+            radial-gradient(
+              650px circle at ${mouseX}px ${mouseY}px,
+              rgba(139, 92, 246, 0.15),
+              transparent 80%
+            )
+          `,
+        }}
+      />
+      <div className="relative z-10 h-full">
+        {children}
+      </div>
     </motion.div>
   );
 };

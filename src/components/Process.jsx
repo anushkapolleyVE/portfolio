@@ -37,7 +37,7 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section id="workflow" className="relative bg-bg">
+    <section id="workflow" className="relative bg-transparent">
       <div className="max-w-6xl mx-auto px-6 py-24">
         <FadeInUp className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Internship Workflow</h2>

@@ -44,7 +44,7 @@ const journeyData = [
 
 export const InternshipWorkflow = () => {
   return (
-    <section id="internshipworkflow" className="relative bg-bg py-20 md:py-32 overflow-hidden font-sans text-text-primary border-t border-border/50">
+    <section id="internshipworkflow" className="relative bg-transparent py-20 md:py-32 overflow-hidden font-sans text-text-primary border-t border-border/50">
       
       {/* Central Glowing Beam */}
       <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 w-24 md:w-48 h-full bg-gradient-to-b from-transparent via-accent/10 to-transparent blur-3xl pointer-events-none"></div>

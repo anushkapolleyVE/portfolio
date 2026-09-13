@@ -14,7 +14,8 @@ const items = [
       website: 'https://medical-chatbot-zhk6.onrender.com',
       github: 'https://github.com/anushkapolley/Medical-chatbot',
       poc: null
-    }
+    },
+    image: '/images/rag-chatbot.png'
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ const items = [
       website: 'https://proposal-generator-six-virid.vercel.app/',
       github: 'https://github.com/MonojitVE/Proposal_generator-.git',
       poc: null
-    }
+    },
+    image: '/images/proposal-generator.png'
   },
   {
     id: 4,
@@ -47,7 +49,8 @@ const items = [
       website: 'https://ai-healthcare-portal-odyb.vercel.app/',
       github: null,
       poc: '/poc/healthcare_poc.pdf'
-    }
+    },
+    image: '/images/health-portal.png'
   },
   {
     id: 3,
@@ -58,7 +61,8 @@ const items = [
       website: 'https://intelli-invoice-ve.vercel.app/',
       github: null,
       poc: '/poc/invoice_poc.pdf'
-    }
+    },
+    image: '/images/intelliinvoice.png'
   },
   {
     id: 6,
@@ -69,7 +73,8 @@ const items = [
       website: 'https://fieldstone-mortgage.vercel.app/',
       github: 'https://github.com/anushkapolleyVE/mortgage-firm.git',
       poc: null
-    }
+    },
+    image: '/images/mortgage.jpg'
   },
   {
     id: 5,
@@ -80,7 +85,8 @@ const items = [
       website: 'https://ingrient-analyser1-1.onrender.com',
       github: 'https://github.com/AfzalVE/Ingrient-Analyser1.git',
       poc: '/poc/ingredient_poc.pdf'
-    }
+    },
+    image: '/images/pantryscan.png'
   },
   {
     id: 7,
@@ -91,7 +97,8 @@ const items = [
       website: 'https://ai-email-automation-pi.vercel.app/',
       github: 'https://github.com/anushkapolleyVE/AI-email-automation.git',
       poc: '/poc/email_agent_poc.pdf'
-    }
+    },
+    image: '/images/email-automation.jpg'
   },
   {
     id: 11,
@@ -113,7 +120,8 @@ const items = [
       website: 'https://presalesaiagent.vestaging.in/',
       github: null,
       poc: null
-    }
+    },
+    image: '/images/presales.jpg'
   },
   {
     id: 10,
@@ -124,7 +132,8 @@ const items = [
       website: 'https://real-estate-lead-qualification.vercel.app/',
       github: null,
       poc: '/poc/propoai_poc.pdf'
-    }
+    },
+    image: '/images/propoai.jpg'
   },
   {
     id: 12,
@@ -135,14 +144,15 @@ const items = [
       website: 'https://texts-frontend-swart.vercel.app/login',
       github: null,
       poc: null
-    }
+    },
+    image: '/images/aigramx.jpg'
   }
 ];
 
 export const Projects = () => {
   return (
-    <section id="work" className="relative bg-surface">
-      <SectionDividerBottom className="absolute top-0 transform -translate-y-full text-bg" />
+    <section id="work" className="relative bg-transparent">
+      <SectionDividerBottom className="absolute top-0 transform -translate-y-full text-transparent" />
       
       <div className="max-w-6xl mx-auto px-6 py-24">
         <FadeInUp>
@@ -156,62 +166,71 @@ export const Projects = () => {
           {items.map((item, index) => {
             return (
               <FadeInUp key={item.id} delay={0.1 * (index % 2 + 1)} className="h-full">
-                <LiftCard className="h-full flex flex-col p-8 bg-surface-raised border-border/50 hover:border-accent/50 transition-colors">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-bg border border-border flex items-center justify-center text-accent">
-                      {item.links.poc && !item.links.website ? (
-                        <FileText className="w-6 h-6" />
-                      ) : (
-                        <ExternalLink className="w-6 h-6" />
+                <LiftCard className="h-full flex flex-col bg-surface-raised border-border/50 hover:border-accent/50 transition-colors relative overflow-hidden group">
+                  {item.image && (
+                    <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover opacity-20 group-hover:opacity-40 group-hover:scale-110 group-hover:-rotate-1 transition-all duration-700 ease-out" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-surface-raised via-surface-raised/90 to-transparent"></div>
+                    </div>
+                  )}
+                  
+                  <div className="relative z-10 flex flex-col h-full p-8">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="w-12 h-12 rounded-xl bg-bg border border-border flex items-center justify-center text-accent shadow-sm">
+                        {item.links.poc && !item.links.website ? (
+                          <FileText className="w-6 h-6" />
+                        ) : (
+                          <ExternalLink className="w-6 h-6" />
+                        )}
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold mb-3 text-text-primary">{item.title}</h3>
+                    <p className="text-text-secondary mb-6 flex-grow leading-relaxed">{item.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+                      {item.tech.map(t => (
+                        <span key={t} className="text-xs font-medium text-text-muted bg-bg/80 backdrop-blur-sm px-2 py-1 rounded-md border border-border">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-wrap gap-3 pt-4 border-t border-border/50">
+                      {item.links.website && (
+                        <a 
+                          href={item.links.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg/80 backdrop-blur-sm border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
+                        >
+                          <ExternalLink className="w-4 h-4" /> Live Website
+                        </a>
+                      )}
+                      
+                      {item.links.poc && (
+                        <a 
+                          href={item.links.poc} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg/80 backdrop-blur-sm border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
+                        >
+                          <FileText className="w-4 h-4" /> View POC Document
+                        </a>
+                      )}
+
+                      {item.links.github && (
+                        <a 
+                          href={item.links.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg/80 backdrop-blur-sm border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
+                        >
+                          <Github className="w-4 h-4" /> GitHub
+                        </a>
                       )}
                     </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold mb-3 text-text-primary">{item.title}</h3>
-                  <p className="text-text-secondary mb-6 flex-grow leading-relaxed">{item.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-8 mt-auto">
-                    {item.tech.map(t => (
-                      <span key={t} className="text-xs font-medium text-text-muted bg-bg px-2 py-1 rounded-md border border-border">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex flex-wrap gap-3 pt-4 border-t border-border/50">
-                    {item.links.website && (
-                      <a 
-                        href={item.links.website} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
-                      >
-                        <ExternalLink className="w-4 h-4" /> Live Website
-                      </a>
-                    )}
-                    
-                    {item.links.poc && (
-                      <a 
-                        href={item.links.poc} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
-                      >
-                        <FileText className="w-4 h-4" /> View POC Document
-                      </a>
-                    )}
-
-                    {item.links.github && (
-                      <a 
-                        href={item.links.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-text-primary bg-bg border border-border hover:border-accent hover:text-accent px-4 py-2 rounded-lg transition-all"
-                      >
-                        <Github className="w-4 h-4" /> GitHub
-                      </a>
-                    )}
                   </div>
                 </LiftCard>
               </FadeInUp>

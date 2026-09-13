@@ -33,7 +33,7 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="relative bg-bg">
+    <section id="skills" className="relative bg-transparent">
       <SectionDivider className="absolute top-0 transform -translate-y-full text-surface rotate-180" />
       
       <div className="max-w-6xl mx-auto px-6 py-24">

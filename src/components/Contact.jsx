@@ -6,7 +6,7 @@ import { Github, Linkedin, Twitter } from './BrandIcons';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="relative bg-bg pt-24 pb-12 overflow-hidden">
+    <section id="contact" className="relative bg-transparent pt-24 pb-12 overflow-hidden">
       <SectionDivider className="absolute top-0 transform -translate-y-full text-surface rotate-180" />
       
       {/* Decorative background blur */}

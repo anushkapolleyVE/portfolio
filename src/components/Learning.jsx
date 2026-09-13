@@ -20,7 +20,7 @@ const learnings = [
 
 export const Learning = () => {
   return (
-    <section id="learning" className="relative bg-surface pb-24">
+    <section id="learning" className="relative bg-transparent pb-24">
       <div className="max-w-6xl mx-auto px-6 py-24">
         <FadeInUp className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Learning & Development</h2>

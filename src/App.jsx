@@ -8,11 +8,14 @@ import { Learning } from './components/Learning';
 import { Contact } from './components/Contact';
 import { InternshipWorkflow } from './components/InternshipWorkflow';
 
+import { AnimatedBackground } from './components/AnimatedBackground';
+
 function App() {
   return (
-    <div className="bg-bg text-text-primary min-h-screen selection:bg-accent selection:text-white">
+    <div className="bg-bg text-text-primary min-h-screen selection:bg-accent selection:text-white relative">
+      <AnimatedBackground />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Skills />
         <InternshipWorkflow />
